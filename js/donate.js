@@ -1,95 +1,98 @@
-// Mandatory Common Function
-function updateBalance(donation)
-{
+// Mandatory Common Functions
+function getMainBalance(){
     const mainText = document.getElementById('main-account').innerText
-    console.log(typeof mainText)
-    console.log(typeof donation)
-    console.log(donation)
     const mainAccountBalance = parseFloat(mainText)
-    console.log(typeof mainAccountBalance)
-    document.getElementById('main-account').innerText = mainAccountBalance-donation
+    return mainAccountBalance;
 }
-// Noakhali JS section
+function updateMainBalance(donation)
+{
+    // console.log(typeof donation)
+    // console.log(donation)
+    const mainAccountBalance = getMainBalance();
+    // console.log(typeof mainAccountBalance)
+    document.getElementById('main-account').innerText = (mainAccountBalance - donation)
+}
+function calculateNewDonationAmount(a,b)
+{
+    const c=a+b
+    return c
+}
+function getDonatedAmountByID(id){
+    const donateText = document.getElementById(id).value
+    if(donateText == '')
+    {
+        alert('Invalid Input.Please try a different input')
+        return 0
+    }
+    const donateAmount = parseFloat(donateText);
+    return donateAmount
+}
+function getDonatedAccountBalanceByID(id){
+    const Balance = document.getElementById(id).innerText
+    const BalanceNumber = parseFloat(Balance);
+    return BalanceNumber
+}
+function updateDonatedAmountTextField(id){
+    document.getElementById(id).value = '';
+}
+//Common function ends
+// Noakhali donate JS section
 document.getElementById('btn-donate-noakhali')
 .addEventListener('click',function(e){
     e.preventDefault();
-    // console.log('Noakhali button clicked')
-    const donateText = document.getElementById('input-donate-noakhali').value
-    const noakhaliBalance = document.getElementById('noakhali-donate-account').innerText
-    // console.log(donateText, noakhaliBalance)
-    const donateAmount = parseFloat(donateText);
-    // Main account balance check
-    const m = document.getElementById('main-account').innerText
-    // console.log(typeof m)
-    const mA = parseFloat(m)
-    // console.log(typeof m)
+    const noakhaliBalanceNumber = getDonatedAccountBalanceByID('noakhali-donate-account')
+    const donateAmount = getDonatedAmountByID('input-donate-noakhali')
+    const mA = getMainBalance()
     if(donateAmount<0){
-        alert('Invalid Input')
+        alert('Invalid Input.Please try a different input')
     }
     else if(donateAmount > mA){
         alert('Insufficient Balance.Please top up')
     }
     else{
-        const noakhaliBalanceNumber = parseFloat(noakhaliBalance);
-        // console.log(donateAmount + noakhaliBalanceNumber)
-        const result = donateAmount + noakhaliBalanceNumber
+        const result = calculateNewDonationAmount(donateAmount,noakhaliBalanceNumber)
         document.getElementById('noakhali-donate-account').innerText = result
-        updateBalance(donateAmount)
+        updateMainBalance(donateAmount)
+        updateDonatedAmountTextField('input-donate-noakhali')
     } 
 })
-// Feni JS section
+// Feni donate JS section
 document.getElementById('btn-donate-feni')
 .addEventListener('click',function(event){
     event.preventDefault();
-    // console.log('Noakhali button clicked')
-    const donateText = document.getElementById('input-donate-feni').value
-    const feniBalance = document.getElementById('feni-donate-account').innerText
-    // console.log(donateText, noakhaliBalance)
-    const donateAmount = parseFloat(donateText);
-    // Main account balance check
-    const m = document.getElementById('main-account').innerText
-    // console.log(typeof m)
-    const mA = parseFloat(m)
-    // console.log(typeof m)
+    const feniBalanceNumber = getDonatedAccountBalanceByID('feni-donate-account')
+    const donateAmount = getDonatedAmountByID('input-donate-feni')
+    const mA = getMainBalance()
     if(donateAmount<0){
-        alert('Invalid Input')
+        alert('Invalid Input.Please try a different input')
     }
     else if(donateAmount > mA){
         alert('Insufficient Balance.Please top up')
     }
     else{
-        const feniBalanceNumber = parseFloat(feniBalance);
-        // console.log(donateAmount + noakhaliBalanceNumber)
-        const result = donateAmount + feniBalanceNumber
+        const result = calculateNewDonationAmount(donateAmount,feniBalanceNumber)
         document.getElementById('feni-donate-account').innerText = result
-        updateBalance(donateAmount)
+        updateMainBalance(donateAmount)
+        updateDonatedAmountTextField('input-donate-feni')
     } 
 })
-// Qouta Protest JS section
+// Qouta Protest donate JS section
 document.getElementById('btn-donate-qouta')
 .addEventListener('click',function(e){
     e.preventDefault();
-    // console.log('Noakhali button clicked')
-    const donateText = document.getElementById('input-donate-quota').value
-    const quotaBalance = document.getElementById('quota-donate-account').innerText
-    // console.log(donateText, noakhaliBalance)
-    const donateAmount = parseFloat(donateText);
-    // Main account balance check
-    const m = document.getElementById('main-account').innerText
-    // console.log(typeof m)
-    const mA = parseFloat(m)
-    // console.log(typeof m)
+    const quotaBalanceNumber = getDonatedAccountBalanceByID('quota-donate-account')
+    const donateAmount = getDonatedAmountByID('input-donate-quota')
+    const mA = getMainBalance()
     if(donateAmount<0){
-        alert('Invalid Input')
+        alert('Invalid Input.Please try a different input')
     }
     else if(donateAmount > mA){
         alert('Insufficient Balance.Please top up')
     }
     else{
-        const quotaBalanceNumber = parseFloat(quotaBalance);
-        // console.log(donateAmount + noakhaliBalanceNumber)
-        const result = donateAmount + quotaBalanceNumber
+        const result = calculateNewDonationAmount(donateAmount,quotaBalanceNumber)
         document.getElementById('quota-donate-account').innerText = result
-        updateBalance(donateAmount)
+        updateMainBalance(donateAmount)
+        updateDonatedAmountTextField('input-donate-quota')
     } 
 })
