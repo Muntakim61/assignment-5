@@ -23,14 +23,8 @@ function containsLetter(S) {
 }
 function getDonatedAmountByID(id){
     const donateText = document.getElementById(id).value
-    if(donateText == '')
-    {
-        alert('Invalid Input.Please try a different input')
-        return 0
-    }
-
-    if(containsLetter(donateText)){
-        alert('Invalid Input.Please try a different input')
+    if(isNaN(donateText)){
+        alert('Invalid Input.Please try a different input');
         return 0
     }
     const donateAmount = parseFloat(donateText);
