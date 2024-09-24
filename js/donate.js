@@ -23,11 +23,21 @@ function containsLetter(S) {
 }
 function getDonatedAmountByID(id){
     const donateText = document.getElementById(id).value
+    if(donateText == '')
+    {
+        alert('Invalid Input.Please try a different input');
+        return 0
+    }
     if(isNaN(donateText)){
         alert('Invalid Input.Please try a different input');
         return 0
     }
     const donateAmount = parseFloat(donateText);
+    if(donateAmount <= 0)
+    {
+            alert('Invalid Input.Please try a different input');
+            return 0
+    }
     return donateAmount
 }
 function getDonatedAccountBalanceByID(id){
