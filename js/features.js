@@ -13,7 +13,6 @@ function changeColorById(id){
     document.getElementById('btn-history').classList.remove('bg-neutral-300')
     document.getElementById('btn-donation').classList.remove('bg-neutral-300')
     if(id == 'btn-donation'){
-        // console.log('if else condition of donation done')
         document.getElementById(id).classList.add('bg-[#B4F461]');
         document.getElementById('btn-history').classList.add('bg-neutral-300');
     }

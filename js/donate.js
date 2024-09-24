@@ -67,6 +67,7 @@ document.getElementById('btn-donate-noakhali')
         updateDonatedAmountTextField('input-donate-noakhali')
         if(donateAmount!=0){
             writeHistory('noakhali-title',donateAmount)
+            my_modal_1.showModal()
         }
     } 
 })
@@ -92,6 +93,7 @@ document.getElementById('btn-donate-feni')
         updateDonatedAmountTextField('input-donate-feni')
         if(donateAmount!=0){
             writeHistory('feni-title',donateAmount)
+            my_modal_1.showModal()
         }
             
     } 
@@ -118,6 +120,7 @@ document.getElementById('btn-donate-qouta')
         updateDonatedAmountTextField('input-donate-quota')
         if(donateAmount!=0){
             writeHistory('quota-title',donateAmount)
+            my_modal_1.showModal()
         }
     } 
 })

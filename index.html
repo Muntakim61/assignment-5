@@ -16,7 +16,7 @@
             <div class="navbar flex justify-around h-32 bg-[#F9F7F3]">
                 <!-- Blog Button -->
                 <div class="">
-                    <a class="btn bg-[#B4F461] font-semibold text-xl w-28 h-12" href="blog.html">Blog</a>
+                    <a class="btn bg-[#B4F461] font-semibold text-xl w-28 h-12" href="blog.html" >Blog</a>
                 </div>
                 <!-- Navbar icon -->
                 <div class="gap-2">
@@ -38,6 +38,22 @@
         </section>
     </head>
     <main id="main-body" class="bg-white m-0 p-0 h-screen mt-48 pt-32">
+        <!-- modal part starts -->
+         <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="text-xl font-bold text-center">Congrats!!!</h3>
+                <img class="rounded-xl mx-auto mt-2" src="assets/coin.png" alt="">
+                <p class="py-4 text-center text-lg">You have donated to mankind</p>
+                <p class="font-bold text-xl text-center">Successfully</p>
+                <div class="modal-action w-full flex justify-center">
+                    <form method="dialog" >
+                        <button class="btn ">Close confirmation</button>
+                    </form>
+                </div>
+                </div>
+        </dialog>
+        <!-- modal part ends -->
         <!-- History section -->
         <section id="transaction-history-section" class="hidden h-screen mt-20">
             <!-- Transaction History part -->
@@ -47,13 +63,13 @@
         <!-- Main donation page -->
         <section id="main-donation-section" class="m-0 bg-white hidden mb-8 w-[100%]">
             <!-- Hero Card Noakhali -->
-            <div class="hero border w-[70%] mx-auto rounded-xl mb-8 shadow-lg">
+            <div class="hero border w-[75%] mx-auto rounded-xl mb-8 shadow-lg py-6">
                 <div class="hero-content flex-col lg:flex-row">
                   <!-- Noakhali image -->
                   <img
                     src="assets/noakhali.png" 
-                    class="rounded-lg shadow-2xl w-fit" />
-                  <div class="max-w-6xl">
+                    class="rounded-lg shadow-2xl w-[100%]" />
+                  <div class="max-w-6xl ml-4">
                     <!-- Noakhali donate account part -->
                     <div class="flex border max-w-32 py-3 px-4 justify-between bg-neutral-200 rounded-lg">
                         <img src="assets/coin.png" alt="">
@@ -61,14 +77,14 @@
                         <p class="font-semibold mr-1">BDT</p>
                     </div>
                     <!-- Noakhali donate title -->
-                    <h1 id="noakhali-title" class="text-xl font-bold max-w-lg">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <h1 id="noakhali-title" class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                     <!-- Noakhali donate description -->
-                    <p class="py-6 max-w-lg text-justify">
+                    <p class="py-6 text-justify">
                         The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                     </p>
                     <!-- Noakhali donate input -->
                     <form action="">
-                        <input id="input-donate-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-lg mb-4" />
+                        <input id="input-donate-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
                         <!-- Noakhali donate button -->
                         <button id="btn-donate-noakhali" class="btn bg-[#B4F461] justify-items-center h-14 w-full font-semibold text-xl">Donate Now</button>
                     </form>
@@ -77,46 +93,46 @@
                 </div>
             </div>
             <!-- Hero Card Feni -->
-            <div class="hero border w-[70%] mx-auto rounded-xl mb-8 shadow-lg">
+            <div class="hero border w-[75%] mx-auto rounded-xl mb-8 shadow-lg py-6">
                 <div class="hero-content flex-col lg:flex-row">
                   <img
                     src="assets/feni.png" 
-                    class="max-w rounded-lg shadow-2xl" />
-                  <div class="max-w-6xl">
+                    class="max-w rounded-lg shadow-2xl w-[100%] " />
+                  <div class="max-w-6xl  ml-4">
                     <div class="flex border max-w-32 py-3 px-4 justify-between bg-neutral-200 rounded-lg">
                         <img src="assets/coin.png" alt="">
                         <p id="feni-donate-account" class="font-semibold mx-1">5000</p>
                         <p class="font-semibold">BDT</p>
                     </div>
-                    <h1 id="feni-title" class="text-xl font-bold max-w-lg">Donate for Flood Relief in Feni,Bangladesh</h1>
-                    <p class="py-6 max-w-lg text-justify">
+                    <h1 id="feni-title" class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="py-6 text-justify">
                         The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                     </p>
                     <form action="">
-                        <input id="input-donate-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-lg mb-4" />
+                        <input id="input-donate-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
                     </form>
                     <button id="btn-donate-feni" class="btn bg-[#B4F461] justify-items-center h-14 w-full font-semibold text-xl">Donate Now</button>
                   </div>
                 </div>
             </div>
             <!-- Hero Card Qouta Protest -->
-            <div class="hero border w-[70%] mx-auto rounded-xl mb-20 shadow-lg">
+            <div class="hero border w-[75%] mx-auto rounded-xl mb-20 shadow-lg py-6">
                 <div class="hero-content flex-col lg:flex-row ">
                   <img
                     src="assets/quota-protest.png" 
-                    class="max-w rounded-lg shadow-2xl" />
-                  <div class="max-w-6xl">
+                    class="max-w rounded-lg shadow-2xl w-[100%]" />
+                  <div class="max-w-6xl ml-4">
                     <div class="flex border max-w-32 py-3 px-4 justify-between bg-neutral-200 rounded-lg">
                         <img src="assets/coin.png" alt="">
                         <p id="quota-donate-account" class="font-semibold  mx-1">5000</p>
                         <p class="font-semibold">BDT</p>
                     </div>
-                    <h1 id="quota-title" class="text-xl font-bold max-w-lg">Aid for Injured in the Quota Movement</h1>
-                    <p class="py-6 max-w-lg text-justify">
+                    <h1 id="quota-title" class="text-xl font-bold ">Aid for Injured in the Quota Movement</h1>
+                    <p class="py-6 text-justify">
                         The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                     </p>
                     <form action="">
-                        <input id="input-donate-quota" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-lg mb-4" />
+                        <input id="input-donate-quota" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
                     </form>
                     <button id="btn-donate-qouta" class="btn bg-[#B4F461] justify-items-center h-14 w-full font-semibold text-xl">Donate Now</button>
                   </div>

@@ -11,8 +11,8 @@
     <header>
         <!-- Main navbar -->
     <section class="backdrop-blur-3xl fixed top-0 w-full z-50">
-        <div class="navbar flex justify-around h-32 bg-[#F9F7F3]">
-            <!-- Blog Button -->
+        <div class="navbar flex justify-around h-32">
+            <!-- Home Button -->
             <div class="">
                     <a class="btn bg-[#B4F461] font-semibold text-xl w-28 h-12" href="index.html">Home</a>
             </div>
@@ -30,42 +30,84 @@
         </div>
     </section>
     </header>
-    <main>
+    <main id="blog-main-body" class="h-screen">
         <h1 class="text-center mt-48 font-bold text-6xl">Frequently Asked Questions</h1>
-        <section class="mx-auto w-[90%]">
+        <section class="mx-auto w-[90%] text-xl">
             <!-- accordion 1 -->
         <div class="collapse collapse-arrow bg-base-200 mt-12">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects (or nodes), allowing developers to access, modify, and manipulate the content, structure, and style of a webpage dynamically using languages like JavaScript.In simpler terms, the DOM turns the document's HTML elements into objects that can be interacted with. For example, you can change the text in a paragraph, add new elements, or handle user interactions like clicks.Think of the DOM as the bridge between the web page and the scripts that make it interactive! </p>
             </div>
           </div>
            <!-- accordion 2 -->
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>You can select elements from the DOM using various methods provided by JavaScript. Here are some commonly used ways: <br>
+
+              1. <b>getElementById</b> :Selects an element by its `id` attribute. <br>
+              2. <b>getElementsByClassName</b> :Selects all elements with a specific class. It returns a live HTMLCollection (similar to an array). <br>
+              3. <b>getElementsByTagName()</b> :Selects all elements with a specific tag name (e.g., `div`, `p`).It also returns an HTMLCollection. <br>
+              4. <b>querySelector()</b>:Selects the first element that matches a CSS selector (e.g., class, ID, or tag). <br>
+              5. <b>querySelectorAll()</b>:Selects all elements that match a CSS selector. It returns a static NodeList (similar to an array). <br>
+              These methods give you a range of ways to grab elements from the DOM like a pro, depending on your specific needs! 🕹️</p>
             </div>
           </div>
            <!-- accordion 3 -->
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-justify">Event delegation is a technique in the DOM where you attach a single event listener to a parent element, rather than to multiple child elements. The event listener listens for events triggered by child elements by taking advantage of event bubbling, where an event propagates from the target element up through the DOM hierarchy. <br>
+                <b>Usefullness:</b> <br>
+                <b>Performance Optimization:</b>Instead of adding multiple event listeners to several child elements, you only add one listener to a parent, reducing memory usage and improving performance, especially when there are many child elements.<br>
+                <b>Handling Dynamic Elements:</b> It allows you to manage events on dynamically added child elements. Since the event listener is attached to the parent, it automatically applies to any new child elements added after the listener is set.<br>
+                <b>Cleaner Code: </b>Centralizes event handling, making the code more maintainable and reducing redundancy.</p>
             </div>
           </div>
            <!-- accordion 4 -->
            <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>
+                <b>1. Manipulating Attributes:</b>
+                
+                <br><b>getAttribute():</b> Retrieves the value of a specified attribute.
+                <br><b>setAttribute():</b> Sets or updates the value of an attribute.
+                <br><b>removeAttribute():</b> Removes a specified attribute from an element.
+                <br><b>hasAttribute(): </b>Checks if an element has a specific attribute.
+                2. Manipulating Styles:
+                <br><b>Inline Styles:</b>
+                <ul>
+                  <li>  <b>style.property:</b> Directly modify a specific CSS property using the style object.</li>
+                  <li>  <b>style.cssText: </b>Set multiple styles at once using a string of CSS code.</li>
+                </ul>
+                CSS Classes:
+                <br><b>classList.add(): </b> Adds a CSS class to the element.
+                <br><b>classList.remove(): </b>Removes a specific CSS class.
+                <br><b>classList.toggle(): </b>Toggles a class on or off.
+                <br><b>classList.contains(): </b>Checks if an element contains a specific class.
+                </p>
             </div>
           </div>
         </section>
     </main>
+    <footer>
+      <section class="bg-[#F9F7F3]">
+          <p class="invisible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum possimus accusamus earum esse quidem provident tempora ratione unde blanditiis officiis commodi ducimus, doloribus explicabo suscipit porro animi distinctio magni quo.
+          Architecto facilis nulla laudantium illum impedit rerum porro odit? Magni alias aperiam inventore repellat non aut, debitis labore totam ab placeat. Tempore, fugit? Voluptates, ad amet praesentium ullam voluptas earum.
+          Cupiditate laborum cum nisi error minima veritatis! Distinctio iste laborum vero quam sunt architecto hic nesciunt dicta beatae autem nisi corrupti eligendi soluta atque ad, assumenda, possimus quo veniam ut.
+          Veniam, repellat fugit. Nostrum amet, et illo reprehenderit dolores qui deleniti iure a similique aspernatur, vero iste esse vel alias dolor enim ipsum repellat ut animi doloremque minima optio maiores.
+          Quia, eaque amet modi in neque tempore non blanditiis quae doloremque reprehenderit incidunt numquam eveniet commodi totam odit consequatur ea, tenetur eum ex, dolores adipisci autem. Illo repellat eum cumque!
+          Ducimus, modi enim. Distinctio unde libero error fuga debitis voluptas minima? Modi eaque harum quo maxime perspiciatis rerum similique, atque ad voluptas, a voluptatem nostrum quia vitae, tempore adipisci quas.
+          </p>
+      </section>
+  </footer>
 </body>
 </html>
+
+
