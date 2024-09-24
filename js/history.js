@@ -3,7 +3,7 @@ function writeHistory(id , amount)
     const divName = document.createElement('div');
     const paragraph1 = document.createElement('p');
     const paragraph2 = document.createElement('p');
-    divName.className = 'hero border rounded-xl w-[70%] display: block mx-auto p-8 shadow-lg mb-8';
+    divName.className = 'hero border rounded-xl w-[70%] display: block mx-auto p-8 shadow-2xl mb-8';
     paragraph1.className = 'font-bold mb-4 text-xl'
     const ptext = document.getElementById(id).innerText
     console.log(ptext)
